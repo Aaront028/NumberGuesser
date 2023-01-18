@@ -17,5 +17,8 @@ Console.ResetColor();
 
 // Ask users name
 Console.WriteLine("What is your name?");
-string name  = Console.ReadLine();
 
+// Get user input
+string name = Console.ReadLine();
+
+Console.WriteLine("Hello {0}. Lets play a game!", name);
