@@ -24,7 +24,12 @@ string name = Console.ReadLine();
 Console.WriteLine("Hello {0}. Lets play a game!", name);
 
 // Init correct number
-int correctNumber = 7;
+//int correctNumber = 7;
+
+// Create a new Random object
+Random random = new Random();
+
+int correctNumber = random.Next(1, 10);
 
 // Init guess var
 int guess = 0;
@@ -48,6 +53,10 @@ while(guess != correctNumber)
 
         // Reset console color
         Console.ResetColor();
+
+        // Keep going
+        continue;
+
     }
 
     // Cast to int and put in guess
@@ -64,7 +73,6 @@ while(guess != correctNumber)
 
         // Reset console color
         Console.ResetColor();
-
 
     }
 }
