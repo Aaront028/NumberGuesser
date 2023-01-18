@@ -22,3 +22,61 @@ Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 
 Console.WriteLine("Hello {0}. Lets play a game!", name);
+
+// Init correct number
+int correctNumber = 7;
+
+// Init guess var
+int guess = 0;
+
+Console.WriteLine("Guess a number between 1 and 10");
+
+// Whilte guess is not correct
+while(guess != correctNumber) 
+{
+    // Get users input
+    string input = Console.ReadLine();
+
+    // Make sure its a number
+    if(!int.TryParse(input, out guess))
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+
+
+        // Write out app info
+        Console.WriteLine("Please enter an actual number");
+
+        // Reset console color
+        Console.ResetColor();
+    }
+
+    // Cast to int and put in guess
+    guess = Int32.Parse(input);
+
+    // Match guess to correct number
+    if(guess != correctNumber)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+
+
+        // Write out app info
+        Console.WriteLine("Wrong number please try again");
+
+        // Reset console color
+        Console.ResetColor();
+
+
+    }
+}
+
+// Output success message
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+
+
+// Write out app info
+Console.WriteLine("You have guessed correctly!");
+
+// Reset console color
+Console.ResetColor();
+
