@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //Set app vars
+using System.Diagnostics;
+
 string appName = "Number Guesser";
 string appVersion = "1.0.0";
 string appAuthor = "Brad Traversy";
@@ -22,6 +24,10 @@ Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 
 Console.WriteLine("Hello {0}. Lets play a game!", name);
+
+while(true)
+{
+
 
 // Init correct number
 //int correctNumber = 7;
@@ -88,3 +94,24 @@ Console.WriteLine("You have guessed correctly!");
 // Reset console color
 Console.ResetColor();
 
+// Ask to play again
+Console.WriteLine("Play Again? [Y or N]");
+
+// Get answer
+string answer = Console.ReadLine().ToUpper();
+
+    if (answer == "Y")
+    {
+        continue;
+    }
+    else if(answer == "N")
+    {
+        return;
+    }
+    
+    else
+    {
+        return;
+    }
+
+}
